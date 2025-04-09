@@ -1,20 +1,23 @@
 package com.chess.backend717.controller.pk;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/pk/")
 public class botinfoController {
     @RequestMapping("getbotinfo/")
-    public List<String> getbotinfo(){
-        List<String> List = new LinkedList<>();
-        List.add("joker");
-        List.add("pig");
-
-        return List;
+    public Map<String, String> getBotInfo() {
+        Map<String, String> bot1 = new HashMap<>();
+        bot1.put("name", "tiger");
+        bot1.put("rating", "1500");
+        return bot1;
     }
+
 }
